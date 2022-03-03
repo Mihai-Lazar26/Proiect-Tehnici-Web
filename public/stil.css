@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	margin-left:0;
+	margin-bottom:0;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+
+.banner
+{
+	
+	border: 5px solid rgb(255, 255, 255);
+	height: 60vh;
+	float: left;
+	grid-column: 1/3;
+	
+	background-color: rgba(0, 0, 0, 0.466);
+	background-image: url("Imagini/banner.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+
+
+}
+
+.titlu-banner{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.459);
+
+
+	color: beige;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50vh;     /* The same as your div height */
+	
+}
+
+.banner:hover .titlu-banner{
+	display: block;
+	transition: 2s;
+}
+
+
+.meniu{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	grid-column: 1/3;
+	background-color:rgba(0, 0, 0, 0.418);
+	border: 3px solid rgb(255, 255, 255)
+}
+
+.dropdown
+{
+	position: relative;
+    display: inline-block;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.dropbtn
+{
+	width: 20vw;
+	height: 5vw;
+	max-width: 250px;
+	min-height: 50px;
+	min-width: 200px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	font-size: 16px;
+	border: 0px solid red;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	width: 20vw;
+	height: auto;
+	max-width: 250px;
+	min-height: 50px;
+	min-width: 200px;
+	background-color: rgb(44, 42, 42);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: rgb(255, 255, 255);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {background-color: #494848}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #a8a8a8;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 69% 30%;
+	background-color: #000000;
+	padding: 10px;
+	grid-gap: 10px;
+}
+
+.continut {
+	background-color: rgb(83, 83, 83);
+	border: 3px solid rgb(255, 255, 255);
+	padding: 20px;
+	font-size: 20px;
+	text-align: justify;
+	
+}
+.continut p{
+	margin-bottom: 10px;
+	line-height: 30px;
+}
+
+.continut h2{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 30px;
+	color: beige;
+}
+
+.continut h3{
+	margin-bottom: 20px;
+	margin-top: 20px;
+	line-height: 30px;
+	color: rgb(143, 143, 139);
+}
+
+.continut p::after {
+	content: " ★";
+}
+
+.continut p::before {
+	content: "★ ";
+}
+
+.imagini {
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	
+	
+	background-color: rgb(83, 83, 83);
+	border: 3px solid rgb(255, 255, 255);
+	padding: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.imagini-box{
+	position: relative;
+	width: 20vw;
+	min-width: 250px;
+	transition: 2s;
+	margin: 10px;
+	color: beige;
+}
+
+.imagini-title
+{
+	font-size: 20px;
+	text-align: center;
+}
+
+.imagini-box img{
+	width:100%;
+	border-radius:20px;
+	margin-bottom: -4px;
+	filter: grayscale(100%) blur(2px);
+	transition: width 2s, filter 5s, border-radius 3s;
+	cursor: pointer;
+}
+
+.imagini-box:hover
+{
+	/* width:21vw;
+	min-width: 260px; */
+
+	transform: scale(1.05);
+}
+
+.imagini-box:hover img
+{
+	border-radius: 0px;
+	filter: grayscale(0%) blur(0px);
+}
+
+.animatie-container
+{
+	height: 4vw;
+	grid-column: 1/3;
+	background-color: rgba(255, 255, 255, 0.473);
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.cutie-animata{
+	height: 4vw;
+	width: 4vw;
+	background-color: white;
+	position:relative;
+	animation: mymove 5s infinite;
+	margin-right:20px;
+	left: 0%;
+	
+}
+
+.galerie{
+	position: fixed;
+	height: 70vh;
+	width: 70vw;
+	top: 50%;
+	left: 50%;
+	margin-top: -35vh; /* Negative half of height. */
+	margin-left: -35vw; /* Negative half of width. */
+	background-color:rgba(0, 0, 0, 0.527);
+	z-index: 2;
+}
+
+.galerie img{
+	display: block;
+	max-height: 80%;
+	max-width: 80%;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+
+}
+
+.x-box{
+	position: absolute;
+	left: 100%;
+	width:3vw;
+	height:3vw;
+	background-color: rgba(0, 0, 0, 0.568);
+	cursor: pointer;
+	color:rgb(255, 255, 255);
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 3vw;       /* The same as your div height */
+	transition: 1s;
+}
+
+.prev-img{
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: -1.5vw; /* Negative half of width. */
+	width:3vw;
+	height:10vh;
+
+	background-color: rgba(0, 0, 0, 0.568);
+	cursor: pointer;
+	color:rgb(255, 255, 255);
+
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 10vh;       /* The same as your div height */
+	transition: 1s;
+}
+
+.next-img{
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+	margin-left: 1.5vw; /* Positive half of width. */
+	width:3vw;
+	height:10vh;
+
+	background-color: rgba(0, 0, 0, 0.568);
+	cursor: pointer;
+	color:rgb(255, 255, 255);
+	
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 10vh;       /* The same as your div height */
+	transition: 1s;
+}
+
+.x-box:hover{
+	background-color: rgba(58, 57, 57, 0.568);
+}
+
+.prev-img:hover{
+	background-color: rgba(58, 57, 57, 0.568);
+}
+
+.next-img:hover{
+	background-color: rgba(58, 57, 57, 0.568);
+}
+
+.random-color-box{
+	height: 4vw;
+	grid-column: 1/3;
+	background-color: #ffffff;
+}
+
+@keyframes mymove {
+  from {}
+  to {left: 99%; height: 0vw; width: 0vw; transform: rotate(360deg);
+		background-color: black; opacity: 0.2; border-radius: 100%;}
+}
+
+
+@media only screen and (max-width: 1000px) {
+	
+	.continut{
+		grid-column: 1/3;
+	}
+	
+	.imagini{
+		grid-column: 1/3;
+	}
+	
+}
